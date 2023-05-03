@@ -1,0 +1,561 @@
+@font-face {
+  font-family: "Ruberoid-Bold";
+  src: url("/fonts/Ruberoid-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Ruberoid-Medium";
+  src: url("/fonts/Ruberoid-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Ruberoid-Light";
+  src: url("/fonts/Ruberoid-Light.woff2");
+}
+
+@font-face {
+  font-family: "Ruberoid-ExtraBold";
+  src: url("/fonts/Ruberoid-ExtraBold.woff2");
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ruberoid-Light";
+}
+
+body {
+  background-color: #232427;
+  color: white;
+  background-image: url(/img/Rectangle-head.png);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-size: 50% 1117px;
+}
+
+#container {
+  max-width: 1337px;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+#home {
+  /* min-height: 1117px; */
+  padding-bottom: 186px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 53px;
+  margin-bottom: 115px;
+}
+
+.logo {
+  width: 50px;
+  height: 87px;
+}
+
+.header_links ul {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+}
+
+.header_links ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.header_links ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.header_links ul li:hover {
+  /* filter: blur(10px); */
+  color: #9ca3af;
+}
+
+.header_social {
+  display: flex;
+  gap: 43px;
+}
+
+.header_social img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.home_body {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: "Ruberoid-ExtraBold" !important;
+}
+
+.home_body h1 {
+  position: absolute;
+  /* font-family: "adineue PRO"; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 113px;
+  font-family: "Ruberoid-ExtraBold";
+}
+
+.myWork_link {
+  width: 268px;
+  height: 50px;
+  background: linear-gradient(92.05deg, #e30057 0.62%, #8826d1 100%);
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+
+  position: absolute;
+  left: 16%;
+}
+
+.left-text {
+  left: 10%;
+  top: 22%;
+}
+
+.right-text {
+  right: 6%;
+  bottom: 38%;
+}
+
+.home_body h2 {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+
+  /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,
+    0 0 40px rgba(0, 170, 255, 0.6), 0 0 70px rgba(0, 170, 255, 0.6),
+    0 0 80px rgba(0, 170, 255, 0.2), 0 0 100px rgba(0, 170, 255, 0.1),
+    0 0 150px rgba(0, 170, 255, 0.1); */
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 39px;
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.phone_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Skills start */
+
+#skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.card {
+  width: 448px;
+  height: 542px;
+  background: #1b1c20;
+  position: relative;
+  padding: 160px 25px 212px 25px;
+  cursor: pointer;
+}
+
+.card svg {
+  position: absolute;
+  top: 45px;
+  right: 36px;
+  opacity: 0;
+}
+
+.card:hover svg {
+  opacity: 1;
+}
+
+/* .card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+} */
+
+.card-content {
+  text-align: left;
+  max-width: 372px;
+}
+
+.card h1 {
+  font-family: "Ruberoid-ExtraBold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 95px;
+  background: linear-gradient(91.57deg, #4f4d4d 14.03%, #8a8888 99.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  transition: color 1s ease-in-out;
+  position: absolute;
+  right: 18px;
+  bottom: 50px;
+}
+
+.card:hover h1 {
+  background: linear-gradient(92.04deg, #e30057 11.85%, #8826d1 99.31%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.skills_line {
+  border-bottom: 1px solid #fffafa;
+}
+
+/* Skills end */
+
+/* Projects start */
+
+/* #projects {
+  min-height: 972px;
+  background: linear-gradient(rgb(10 6 6 / 66%), rgb(0 0 0 / 74%)) no-repeat
+      center,
+    url(/img/tocha_screen.png) no-repeat center;
+  background-size: 1243px 745px;
+  position: relative;
+} */
+
+.projects_title {
+  font-family: "Ruberoid-ExtraBold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 85px;
+  margin-bottom: 44px;
+
+  text-align: center;
+}
+
+.circls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 46px;
+}
+
+.project_one {
+  min-height: 972px;
+  /* margin-top: 136px; */
+  background: linear-gradient(rgb(10 6 6 / 66%), rgb(0 0 0 / 74%)) no-repeat
+      center,
+    url(/img/tocha_screen.png) no-repeat center;
+  background-size: 1243px 745px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.line_one_card {
+  width: 3px;
+  height: 108px;
+  background: #8826D1;
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+}
+
+.project_two {
+  min-height: 972px;
+  /* margin-top: 136px; */
+  background: linear-gradient(rgb(10 6 6 / 66%), rgb(0 0 0 / 74%)) no-repeat
+      center,
+    url(/img/shortLink.png) no-repeat center;
+  background-size: 1243px 745px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.line_two_card {
+  width: 3px;
+  height: 108px;
+  background: #F8550E;
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+}
+
+.project_three {
+  min-height: 972px;
+  height: 75vh;
+  /* margin-top: 136px; */
+  background: linear-gradient(rgb(10 6 6 / 66%), rgb(0 0 0 / 74%)) no-repeat
+      center,
+    url(/img/bdo.png) no-repeat center;
+  background-size: 1243px 745px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 166px;
+}
+
+.line_three_card {
+  width: 3px;
+  height: 108px;
+  background: #2ff80e;
+  position: absolute;
+  left: 0;
+  bottom: 30%;
+}
+
+
+
+.project_one_circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #bd0f71 0%, rgba(136, 38, 209, 0) 100%);
+}
+
+.project_two_circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #f8550e 0%, rgba(136, 38, 209, 0) 100%);
+}
+
+.project_three_circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #2ff80e 0%, rgba(136, 38, 209, 0) 100%);
+}
+
+.projects_card {
+  height: 246px;
+  width: 642px;
+  border-radius: 2px;
+
+  position: absolute;
+  right: 0;
+  bottom: 3%;
+
+  background: #232427;
+  box-shadow: -3px 4px 9px rgba(0, 0, 0, 0.5);
+
+  padding: 36px 57px 50px 68px;
+}
+
+.projects_card p {
+  font-family: "Ruberoid-ExtraBold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.projects_card_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.project_one .projects_card_head a {
+  font-family: "Ruberoid-ExtraBold";
+  color: #8826d1;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.project_two .projects_card_head a {
+  font-family: "Ruberoid-ExtraBold";
+  color: #f8550e;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.project_three .projects_card_head a {
+  font-family: "Ruberoid-ExtraBold";
+  color: #2ff80e;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/* End projects */
+
+/*  Start contact*/
+
+#contact {
+  margin: 126px 0 127px 0;
+}
+
+.contact_form {
+  max-width: 1354px;
+  height: 711px;
+  background: #1b1c20;
+  padding: 123px 273px 124px 334px;
+  color: white;
+}
+
+.contact_form input {
+  font-family: "Ruberoid-ExtraBold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  width: 734px;
+  height: 66px;
+  background-color: transparent;
+  border: transparent;
+  padding: 0 0 15px 0;
+  margin-bottom: 36px;
+  color: white;
+
+  border-bottom: 2px solid #79797a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.contact_form input:focus {
+  outline: none;
+}
+
+.contact_form textarea {
+  font-family: "Ruberoid-ExtraBold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: white;
+  width: 734px;
+  height: 66px;
+  background-color: transparent;
+  border: transparent;
+  padding: 0 0 15px 0;
+
+  border-bottom: 2px solid #79797a;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 36px;
+}
+
+.contact_form textarea:focus {
+  outline: none;
+}
+
+.contact_form button {
+  width: 734px;
+  height: 68px;
+  color: white;
+
+  background: linear-gradient(90deg, #e30057 10.76%, #8826d1 65.53%);
+  border-radius: 35px;
+  cursor: pointer;
+  margin-bottom: 51px;
+}
+
+.gmail a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+
+.contact_line_gmail {
+  margin-top: 10px;
+  width: 50px;
+  height: 5px;
+  background: linear-gradient(90deg, #e30057 0%, #8826d1 103.26%);
+}
+
+/*  End contact*/
+
+/* Footer start */
+
+footer {
+  min-height: 362px;
+  background: #1b1c20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 147px 537px 157px 158px;
+}
+
+/* Footer End */
