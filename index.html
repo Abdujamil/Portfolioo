@@ -15,8 +15,12 @@
   <body>
     <div id="container">
       <section id="home">
+        <div class="vertical_line"></div>
+        <div class="vertical_line_right"></div>
         <header class="header">
-          <img class="logo" src="/img/R.svg" alt="logo" />
+          <a href="/">
+            <img class="logo" src="/img/logo-A.svg" alt="logo" />
+          </a>
           <div class="header_links">
             <ul>
               <li><a href="#home">Home</a></li>
@@ -26,7 +30,7 @@
             </ul>
           </div>
           <div class="header_social">
-            <a href="#">
+            <a href="https://github.com/Abdujamil" target="_blank">
               <img src="/img/github.svg" alt="github" />
             </a>
             <a href="#">
@@ -35,13 +39,13 @@
           </div>
         </header>
         <div class="home_body">
-          <h2>Abdujamil</h2>
-          <h1 class="left-text">software</h1>
+          <h2 class="flipX">Abdujamil</h2>
+          <h1 class="left-text flipX">software</h1>
           <a href="https://github.com/Abdujamil" target="_blank">
             <button class="myWork_link">My work</button>
           </a>
           <img class="phone_img" src="/img/phone-img.png" alt="phone-img" />
-          <h1 class="right-text">developer</h1>
+          <h1 class="right-text flipX">developer</h1>
         </div>
       </section>
       <section id="skills">
@@ -118,7 +122,6 @@
       <div class="skills_line"></div>
 
       <section id="projects">
-
         <div class="project_three">
           <div class="project_three_body">
             <h1 class="projects_title">BDO</h1>
@@ -132,19 +135,24 @@
               <div class="projects_card_head">
                 <a href="#">web</a>
                 <div class="projects_head_flex">
-                  <a href="#">live |</a> <a href="#">source code |</a>
-                  <a href="#">design</a>
+                  <a
+                    href="https://bdoinvestment.digiproduct.co.il/"
+                    target="_blank"
+                    >live |</a
+                  >
+                  <a href="https://github.com/Abdujamil/" target="_blank"
+                    >source code |</a
+                  >
+                  <a href="https://figma.com" target="_blank">design</a>
                 </div>
               </div>
               <p class="projects_card_desc">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book
+                Website for BDO investment. Technologies that were used: HTML,
+                CSS, PHP, JS, WordPress, ACF, Contact Form 7.
               </p>
             </div>
           </div>
         </div>
-
         <div class="project_two">
           <div class="project_two_body">
             <h1 class="projects_title">Shorter link</h1>
@@ -158,19 +166,23 @@
               <div class="projects_card_head">
                 <a href="#">web</a>
                 <div class="projects_head_flex">
-                  <a href="#">live |</a> <a href="#">source code |</a>
+                  <a href="#">live |</a>
+                  <a
+                    href="https://github.com/Abdujamil/shortlink"
+                    target="_blank"
+                    >source code |</a
+                  >
                   <a href="#">design</a>
                 </div>
               </div>
               <p class="projects_card_desc">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book
+                Created a WordPress plugin using PHP, CSS, and HTML that
+                shortens long links and tracks clicks. It's a handy tool for
+                link management and works on any WordPress website.
               </p>
             </div>
           </div>
         </div>
-
         <div class="project_one">
           <div class="project_one_body">
             <h1 class="projects_title">Tocha</h1>
@@ -184,14 +196,16 @@
               <div class="projects_card_head">
                 <a href="#">web</a>
                 <div class="projects_head_flex">
-                  <a href="#">live |</a> <a href="#">source code |</a>
+                  <a href="#">live |</a>
+                  <a href="https://github.com/Abdujamil/Tocha" target="_blank"
+                    >source code |</a
+                  >
                   <a href="#">design</a>
                 </div>
               </div>
               <p class="projects_card_desc">
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book
+                Designed and developed Tocha website using HTML, CSS, PHP, JS,
+                and DB technologies.
               </p>
             </div>
           </div>
@@ -200,10 +214,16 @@
 
       <section id="contact">
         <div class="contact_form">
-          <input type="text" placeholder="Name">
-          <input type="email" placeholder="Email">
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-          <button>Send Message</button>
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <textarea
+            id="message"
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <button type="submit" value="Submit">Send Message</button>
           <div class="gmail">
             <a href="#">gafforovabdujamil@gmail.com</a>
             <div class="contact_line_gmail"></div>
@@ -211,12 +231,14 @@
         </div>
       </section>
       <footer>
-        <img src="./img/R.svg" alt="logo">
-        <p>All rights reserved  |  Abdujamil</p>
+        <div class="footer_body">
+          <a href="/">
+            <img class="foot_logo" src="/img/logo-A.svg" alt="logo" />
+          </a>
+          <p>All rights reserved | Abdujamil</p>
+        </div>
       </footer>
     </div>
     <script src="./scripts/home-app.js"></script>
-    <script src="./scripts/swiper.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
   </body>
 </html>

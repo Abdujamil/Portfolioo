@@ -69,6 +69,22 @@ body {
 #home {
   /* min-height: 1117px; */
   padding-bottom: 186px;
+  position: relative;
+}
+
+.vertical_line {
+  position: absolute;
+  left: 25%;
+  min-height: 1117px;
+  width: 2px;
+  border: 2px solid #79797a;
+}
+.vertical_line_right {
+  position: absolute;
+  right: 25%;
+  min-height: 350vh;
+  width: 2px;
+  border: 2px solid #79797a;
 }
 
 .header {
@@ -82,6 +98,8 @@ body {
 .logo {
   width: 50px;
   height: 87px;
+  cursor: pointer;
+  transition: width 0.4s ease-in-out;
 }
 
 .header_links ul {
@@ -94,14 +112,19 @@ body {
   list-style: none;
   cursor: pointer;
 }
-.header_links ul li a{
+.header_links ul li a {
   text-decoration: none;
   color: white;
+  padding-bottom: 5px;
+
+  transition: all 0.4s ease-in-out;
 }
 
-.header_links ul li:hover {
+.header_links ul li a:hover {
   /* filter: blur(10px); */
+  /* transform: scale(1.1); */
   color: #9ca3af;
+  border-bottom: 0.2px solid #9ca3af;
 }
 
 .header_social {
@@ -113,6 +136,12 @@ body {
   width: 35px;
   height: 35px;
   cursor: pointer;
+
+  transition: transform 0.4s ease-in-out;
+}
+
+.header_social img:hover {
+  transform: scale(1.1);
 }
 
 .home_body {
@@ -130,9 +159,82 @@ body {
   font-size: 96px;
   line-height: 113px;
   font-family: "Ruberoid-ExtraBold";
+  cursor: pointer;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.home_body h1:hover {
+  animation: lights 2s 750ms linear infinite;
+  transform: scale(1.02);
+}
+
+.flipX {
+  animation: 4s anim-flipX ease infinite;
+}
+
+/* @keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+} */
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(202, 100%, 50%, 0.5),
+      0 0 0.125em hsla(204, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow: 0 0 1em hsla(204, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 69%, 10%, 0.5),
+      0 0 0.125em hsla(321, 45%, 15%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(219, 100%, 50%, 0.2),
+      0 0 0.125em hsla(204, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
 }
 
 .myWork_link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
   width: 268px;
   height: 50px;
   background: linear-gradient(92.05deg, #e30057 0.62%, #8826d1 100%);
@@ -142,6 +244,12 @@ body {
 
   position: absolute;
   left: 16%;
+
+  transition: transform 0.4s ease-in-out;
+}
+
+.myWork_link:hover {
+  transform: scale(1.1);
 }
 
 .left-text {
@@ -163,6 +271,8 @@ body {
     0 0 40px rgba(0, 170, 255, 0.6), 0 0 70px rgba(0, 170, 255, 0.6),
     0 0 80px rgba(0, 170, 255, 0.2), 0 0 100px rgba(0, 170, 255, 0.1),
     0 0 150px rgba(0, 170, 255, 0.1); */
+
+  animation: lights 5s 750ms linear ease-in;
 
   font-style: normal;
   font-weight: 700;
@@ -203,6 +313,13 @@ body {
   position: relative;
   padding: 160px 25px 212px 25px;
   cursor: pointer;
+  transition: transform 1s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }
 
 .card svg {
@@ -310,10 +427,12 @@ body {
 .line_one_card {
   width: 3px;
   height: 108px;
-  background: #8826D1;
+  background: #8826d1;
   position: absolute;
   left: 0;
   bottom: 30%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .project_two {
@@ -334,10 +453,13 @@ body {
 .line_two_card {
   width: 3px;
   height: 108px;
-  background: #F8550E;
+  background: #f8550e;
   position: absolute;
   left: 0;
   bottom: 30%;
+
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
 
 .project_three {
@@ -363,9 +485,9 @@ body {
   position: absolute;
   left: 0;
   bottom: 30%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
 }
-
-
 
 .project_one_circle {
   width: 86px;
@@ -403,7 +525,30 @@ body {
   background: #232427;
   box-shadow: -3px 4px 9px rgba(0, 0, 0, 0.5);
 
+  background-image: url(/img/logo_background.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+
   padding: 36px 57px 50px 68px;
+
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.projects_card:hover {
+  transform: scale(1.02);
+}
+
+.projects_card:hover .line_three_card {
+  opacity: 1;
+}
+
+.projects_card:hover .line_two_card {
+  opacity: 1;
+}
+
+.projects_card:hover .line_one_card {
+  opacity: 1;
 }
 
 .projects_card p {
@@ -511,6 +656,7 @@ body {
   border-left: none;
   border-right: none;
   margin-bottom: 36px;
+  resize: none;
 }
 
 .contact_form textarea:focus {
@@ -518,6 +664,11 @@ body {
 }
 
 .contact_form button {
+  font-family: "Ruberoid-ExtraBold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
   width: 734px;
   height: 68px;
   color: white;
@@ -526,6 +677,16 @@ body {
   border-radius: 35px;
   cursor: pointer;
   margin-bottom: 51px;
+
+  transition: all 1s ease-in-out;
+}
+
+.contact_form button:hover {
+  transform: scale(1.01);
+}
+
+.gmail {
+  width: 316px;
 }
 
 .gmail a {
@@ -538,11 +699,17 @@ body {
   color: #ffffff;
 }
 
+.gmail:hover .contact_line_gmail {
+  width: 100%;
+}
+
 .contact_line_gmail {
   margin-top: 10px;
   width: 50px;
   height: 5px;
   background: linear-gradient(90deg, #e30057 0%, #8826d1 103.26%);
+
+  transition: all 1s ease-in-out;
 }
 
 /*  End contact*/
@@ -552,10 +719,20 @@ body {
 footer {
   min-height: 362px;
   background: #1b1c20;
+}
+
+.footer_body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 147px 537px 157px 158px;
+  height: 362px;
+  width: 650px;
+  margin: 0 auto;
 }
 
+footer .foot_logo {
+  width: 75px;
+  height: 70px;
+  cursor: pointer;
+}
 /* Footer End */
