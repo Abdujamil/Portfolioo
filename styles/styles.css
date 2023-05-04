@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Ruberoid-Bold";
-  src: url("./fonts/Ruberoid-Bold.woff2");
+  src: url("/fonts/Ruberoid-Bold.woff2");
 }
 
 @font-face {
   font-family: "Ruberoid-Medium";
-  src: url("./fonts/Ruberoid-Medium.woff2");
+  src: url("/fonts/Ruberoid-Medium.woff2");
 }
 
 @font-face {
   font-family: "Ruberoid-Light";
-  src: url("./fonts/Ruberoid-Light.woff2");
+  src: url("/fonts/Ruberoid-Light.woff2");
 }
 
 @font-face {
   font-family: "Ruberoid-ExtraBold";
-  src: url("./fonts/Ruberoid-ExtraBold.woff2");
+  src: url("/fonts/Ruberoid-ExtraBold.woff2");
 }
 
 input::-moz-placeholder,
@@ -54,7 +54,7 @@ input[type="number"] {
 body {
   background-color: #232427;
   color: white;
-  background-image: url(./img/Rectangle-head.png);
+  background-image: url(/img/Rectangle-head.png);
   background-repeat: no-repeat;
   background-position-x: left;
   background-size: 50% 1117px;
