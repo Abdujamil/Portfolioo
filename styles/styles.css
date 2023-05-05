@@ -47,12 +47,12 @@ input[type="number"] {
 :root {
   /* --background-color: #232427; */
   --body-bg-color: #232427;
-  --home-bg-img: url(/img/Rectangle-head.png);
-  --sun-img: url(/img/sun_white.png);
+  --home-bg-img: url(../img/Rectangle-head.png);
+  --sun-img: url(../img/sun_white.png);
   --home-txt-left: white;
   --btn-home-bg: linear-gradient(92.05deg, #e30057 0.62%, #8826d1 100%);
-  --bg-git: url(/img/github.svg);
-  --logo-bg: url(/img/logo-A.svg);
+  --bg-git: url(../img/github.svg);
+  --logo-bg: url(../img/logo-A.svg);
   --bg-title-card: linear-gradient(91.57deg, #4f4d4d 14.03%, #8a8888 99.09%);
   --card-bg-color: #1b1c20;
 
@@ -85,15 +85,15 @@ input[type="number"] {
 
 :root[data-theme="dark"] {
   --body-bg-color: #10151c;
-  --home-bg-img: url(/img/Ractangle_blue_home.png);
+  --home-bg-img: url(../img/Ractangle_blue_home.png);
   /* --background-color: rgb(255, 255, 255); */
   /* --home-bg-img: url(/img/Rectangle_head_white.png); */
-  --sun-img: url(/img/moon_blue.png);
+  --sun-img: url(../img/moon_blue.png);
   /* --home-txt-left: rgb(5, 87, 112); */
   --home-txt-left: rgb(179, 232, 248);
   --btn-home-bg: linear-gradient(92.05deg, #4892d8 0.62%, #923ed3 100%);
-  --bg-git: url(/img/blue-git-icon.svg);
-  --logo-bg: url(/img/blue_logo.svg);
+  --bg-git: url(../img/blue-git-icon.svg);
+  --logo-bg: url(../img/blue_logo.svg);
   --bg-title-card: linear-gradient(91.57deg, #0e3352 14.03%, #8a8888 99.09%);
   --bg-title-card-hover: linear-gradient(92.05deg, #4892d8 0.62%, #923ed3 100%);
   --vartical-line-border: 1px solid rgb(2, 81, 105);
