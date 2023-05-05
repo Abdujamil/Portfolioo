@@ -1119,6 +1119,7 @@ body {
   bottom: 3%;
 
   background: #232427;
+  background: var(--card-bg-color);
   box-shadow: -3px 4px 9px rgba(0, 0, 0, 0.5);
 
   background-image: url(../img/logo_background.svg);
@@ -1203,7 +1204,7 @@ body {
 .contact_form {
   max-width: 1354px;
   height: 711px;
-  background: #1b1c20;
+  background: var(--card-bg-color);
   padding: 123px 273px 124px 334px;
   color: white;
 }
@@ -1221,9 +1222,9 @@ body {
   border: transparent;
   padding: 0 0 15px 0;
   margin-bottom: 36px;
-  color: white;
+  color: var(--home-txt-left);
 
-  border-bottom: 2px solid #79797a;
+  border-bottom: var(--vartical-line-border);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -1247,7 +1248,7 @@ body {
   border: transparent;
   padding: 0 0 15px 0;
 
-  border-bottom: 2px solid #79797a;
+  border-bottom: var(--vartical-line-border);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -1269,7 +1270,8 @@ body {
   height: 68px;
   color: white;
 
-  background: linear-gradient(90deg, #e30057 10.76%, #8826d1 65.53%);
+  background: var(--btn-home-bg);
+  /* background: linear-gradient(90deg, #e30057 10.76%, #8826d1 65.53%); */
   border-radius: 35px;
   cursor: pointer;
   margin-bottom: 51px;
@@ -1292,7 +1294,7 @@ body {
   line-height: 24px;
   text-decoration: none;
 
-  color: #ffffff;
+  color: var(--home-txt-left);
 }
 
 .gmail:hover .contact_line_gmail {
@@ -1303,7 +1305,7 @@ body {
   margin-top: 10px;
   width: 50px;
   height: 5px;
-  background: linear-gradient(90deg, #e30057 0%, #8826d1 103.26%);
+  background: var(--btn-home-bg);
 
   transition: all 1s ease-in-out;
 }
@@ -1314,7 +1316,7 @@ body {
 
 footer {
   min-height: 362px;
-  background: #1b1c20;
+  background: var(--card-bg-color);
 }
 
 .footer_body {
@@ -1324,6 +1326,7 @@ footer {
   height: 362px;
   width: 650px;
   margin: 0 auto;
+  color: var(--home-txt-left);
 }
 
 footer .foot_logo {
