@@ -57,42 +57,63 @@
 // });
 
 
+
+function isOpenMenu() {
+    const openMenu = document.querySelector(".row");
+    const closeMenu = document.querySelector(".close");
+    const mobileMenu = document.querySelector(".mob_header_links");
+
+    openMenu.addEventListener('click', () => {
+
+        mobileMenu.style.display = 'block';
+        openMenu.style.display = 'none';
+    })
+
+    closeMenu.addEventListener('click', () => {
+
+        mobileMenu.style.display = 'none';
+        openMenu.style.display = "block";
+    })
+
+}
+
+isOpenMenu();
+
 function changeTheme() {
-    const toggleTheme = document.querySelector('.sun');
+    const toggleTheme = document.querySelectorAll('.sun');
     let el = document.documentElement;
 
-    toggleTheme.addEventListener('click', () => {
+    toggleTheme.forEach((toggleTheme) => {
 
-        if (el.hasAttribute('data-theme')) {
-            el.removeAttribute('data-theme');
-            localStorage.removeItem('theme');
+        toggleTheme.addEventListener('click', () => {
+            if (el.hasAttribute('data-theme')) {
+                el.removeAttribute('data-theme');
+                localStorage.removeItem('theme');
 
-        } else {
-            el.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        }
+            } else {
+                el.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        })
 
-    });
+    })
 
-    if(localStorage.getItem('theme') !== null){
+    // toggleTheme.addEventListener('click', () => {
+
+    //     if (el.hasAttribute('data-theme')) {
+    //         el.removeAttribute('data-theme');
+    //         localStorage.removeItem('theme');
+
+    //     } else {
+    //         el.setAttribute('data-theme', 'dark');
+    //         localStorage.setItem('theme', 'dark');
+    //     }
+
+    // });
+
+    if (localStorage.getItem('theme') !== null) {
         el.setAttribute('data-theme', 'dark');
     }
 }
 
 changeTheme();
-
-const openMenu = document.querySelector(".row");
-const closeMenu = document.querySelector(".close");
-const mobileMenu = document.querySelector(".mob_header_links");
-
-openMenu.addEventListener('click', ()=> {
-
-    mobileMenu.style.display = 'block';
-    openMenu.style.display = 'none';
-})
-
-closeMenu.addEventListener('click', ()=> {
-
-    mobileMenu.style.display = 'none';
-    openMenu.style.display = 'block';
-})

@@ -18,6 +18,28 @@
   src: url("../fonts/Ruberoid-ExtraBold.woff2");
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--body-bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bg-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bg-hover-color) ;
+}
+
+
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   opacity: 1;
@@ -46,6 +68,8 @@ input[type="number"] {
 
 :root {
   /* --background-color: #232427; */
+  --scroll-bg-color: #7e7b7b;
+  --scroll-bg-hover-color: #afacac;
   --body-bg-color: #232427;
   --home-bg-img: url(../img/Rectangle-head.png);
   --sun-img: url(../img/sun_white.png);
@@ -84,6 +108,9 @@ input[type="number"] {
 }
 
 :root[data-theme="dark"] {
+
+  --scroll-bg-color: #01659e;
+  --scroll-bg-hover-color: #4892d8;
   --body-bg-color: #10151c;
   --home-bg-img: url(../img/Ractangle_blue_home.png);
   /* --background-color: rgb(255, 255, 255); */
@@ -191,7 +218,7 @@ body {
 .mob_header_links {
   width: 100%;
   height: 500px;
-  position: absolute;
+  position: fixed;
   top: 0;
   background-color: var(--card-bg-color);
   z-index: 3;
@@ -1095,7 +1122,7 @@ body {
 .line_one_card {
   width: 3px;
   height: 108px;
-  background: #8826d1;
+  background: #8826d1c4;
   position: absolute;
   left: 0;
   bottom: 30%;
@@ -1121,7 +1148,7 @@ body {
 .line_two_card {
   width: 3px;
   height: 108px;
-  background: #f8550e;
+  background: #f8550e8c;
   position: absolute;
   left: 0;
   bottom: 30%;
@@ -1170,7 +1197,7 @@ body {
   height: 86px;
   border-radius: 50%;
 
-  background: linear-gradient(180deg, #bd0f71 0%, rgba(136, 38, 209, 0) 100%);
+  background: linear-gradient(180deg, #8826d1c4 0%, rgba(136, 38, 209, 0) 100%);
 }
 
 .project_two_circle {
@@ -1178,7 +1205,7 @@ body {
   height: 86px;
   border-radius: 50%;
 
-  background: linear-gradient(180deg, #f8550e 0%, rgba(136, 38, 209, 0) 100%);
+  background: linear-gradient(180deg, #f8550e8c 0%, rgba(136, 38, 209, 0) 100%);
 }
 
 .project_three_circle {
@@ -1245,22 +1272,33 @@ body {
 
 .project_one .projects_card_head a {
   font-family: "Ruberoid-ExtraBold";
-  color: #8826d1;
+  color: #8826d1c4;
   text-decoration: none;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  transition: all 0.5s ease-in-out;
+}
+
+.project_one .projects_card_head a:hover {
+  color: #8826d1;
 }
 
 .project_two .projects_card_head a {
   font-family: "Ruberoid-ExtraBold";
-  color: #f8550e;
+  /* color: #f8550e; */
+  color: #f8550e8c;
   text-decoration: none;
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  transition: all 0.5s ease-in-out;
+}
+
+.project_two .projects_card_head a:hover {
+  color: #f8550e;
 }
 
 .project_three .projects_card_head a {
@@ -1271,6 +1309,11 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  transition: all 0.5s ease-in-out;
+}
+
+.project_three .projects_card_head a:hover {
+  color: #0e89af;
 }
 
 @media (max-width: 1280px) {
@@ -1591,8 +1634,7 @@ form {
     height: 9vw;
   }
 
-
-  .gmail{
+  .gmail {
     width: 47.2vw;
   }
 
@@ -1638,6 +1680,7 @@ form {
 footer {
   min-height: 362px;
   background: var(--card-bg-color);
+  margin: 0 10px 0 10px;
 }
 
 .footer_body {
@@ -1655,4 +1698,48 @@ footer .foot_logo {
   height: 70px;
   cursor: pointer;
 }
+
+@media (max-width: 780px) {
+  .footer_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 362px;
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 590px) {
+  .footer_body {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    min-height: 280px;
+  }
+
+  .footer_body {
+    max-width: 100%;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer_body p {
+    font-size: 4vw;
+  }
+
+  footer .foot_logo {
+    width: 20.5vw;
+    height: 20.5vw;
+    cursor: pointer;
+  }
+}
+
 /* Footer End */
