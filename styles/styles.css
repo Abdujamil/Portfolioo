@@ -79,6 +79,7 @@ input[type="number"] {
   --logo-bg: url(../img/logo-A.svg);
   --bg-title-card: linear-gradient(91.57deg, #4f4d4d 14.03%, #8a8888 99.09%);
   --card-bg-color: #1b1c20;
+  --burger-menu-color: white;
 
   --bg-title-card-hover: linear-gradient(
     92.04deg,
@@ -125,6 +126,7 @@ input[type="number"] {
   --bg-title-card-hover: linear-gradient(92.05deg, #4892d8 0.62%, #923ed3 100%);
   --vartical-line-border: 1px solid rgb(2, 81, 105);
   --card-bg-color: #111822;
+  --burger-menu-color: #4892d8;
 
   --projects-color-circle1: linear-gradient(
     180deg,
@@ -223,6 +225,7 @@ body {
   background-color: var(--card-bg-color);
   z-index: 3;
   display: none;
+  /* transition: all 1s ease-in-out; */
 }
 
 .mob_header_links img {
@@ -230,8 +233,8 @@ body {
   height: 30px;
 
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 30px;
+  top: 30px;
   cursor: pointer;
 }
 
@@ -329,6 +332,7 @@ body {
 
 .row {
   display: none;
+  color: var(--burger-menu-color);
 }
 
 .git_bg {
@@ -531,7 +535,7 @@ body {
 .hamburger .line {
   width: 40px;
   height: 3px;
-  background-color: var(--home-txt-left);
+  background-color: var(--burger-menu-color);
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1158,7 +1162,6 @@ body {
 }
 
 .project_three {
-  min-height: 972px;
   height: 75vh;
   /* margin-top: 136px; */
   background: linear-gradient(rgb(10 6 6 / 66%), rgb(0 0 0 / 74%)) no-repeat
@@ -1170,7 +1173,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 166px;
+  /* margin-bottom: 166px; */
 }
 
 .projects_title {
@@ -1389,13 +1392,12 @@ body {
     padding: 20px 20px 20px 20px;
   }
 
-  .project_three,
+  /* .project_three,
   .project_two,
   .project_one {
-    min-height: 60vh;
     height: 60vh;
     margin-bottom: 0;
-  }
+  } */
 
   .projects_card_head {
     margin-bottom: 5vw;
@@ -1446,8 +1448,9 @@ body {
   .project_three,
   .project_two,
   .project_one {
-    min-height: 45vh;
-    height: 45vh;
+    min-height: 65vh;
+    height: 65vh;
+    margin-bottom: 0;
   }
 
   .projects_title {
@@ -1465,12 +1468,12 @@ body {
 }
 
 @media (max-width: 375px) {
-  .project_three,
+  /* .project_three,
   .project_two,
   .project_one {
     min-height: 36vh;
     height: 36vh;
-  }
+  } */
 
   .projects_card {
     padding: 10px 15px 10px 15px;
@@ -1680,7 +1683,7 @@ form {
 footer {
   min-height: 362px;
   background: var(--card-bg-color);
-  margin: 0 10px 0 10px;
+  /* margin: 0 10px 0 10px; */
 }
 
 .footer_body {
