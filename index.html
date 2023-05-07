@@ -35,7 +35,7 @@
             <a href="https://github.com/Abdujamil" target="_blank">
               <div class="git_bg"></div>
             </a>
-              <div class="sun"></div>
+            <div class="sun"></div>
           </div>
 
           <div class="row cf">
@@ -49,7 +49,7 @@
           </div>
 
           <div class="mob_header_links">
-            <img class="close" src="/img/close.png" alt="close btn" />
+            <img class="close" src="../img/close.png" alt="close btn" />
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#skills">skills</a></li>
@@ -59,7 +59,7 @@
                 <a href="https://github.com/Abdujamil" target="_blank">
                   <div class="git_bg"></div>
                 </a>
-                  <div class="sun"></div>
+                <div class="sun"></div>
               </div>
             </ul>
           </div>
@@ -239,17 +239,26 @@
       </section>
 
       <section id="contact">
-        <form action="">
+        <form action="" id="contact-form">
           <div class="contact_form">
-            <input type="text" id="name" name="name" placeholder="Name" />
-            <input type="email" id="email" name="email" placeholder="Email" />
-            <textarea
-              id="message"
-              name="message"
-              cols="30"
-              rows="10"
-              placeholder="Message"
-            ></textarea>
+            <div>
+              <input type="text" id="name" name="name" placeholder="Name" />
+              <div class="error-message" id="name-error"></div>
+            </div>
+            <div>
+              <input type="email" id="email" name="email" placeholder="Email" />
+              <div class="error-message" id="email-error"></div>
+            </div>
+            <div>
+              <textarea
+                id="message"
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+              <div class="error-message" id="message-error"></div>
+            </div>
             <button type="submit" value="Submit">Send Message</button>
             <div class="gmail">
               <a href="#">gafforovabdujamil@gmail.com</a>

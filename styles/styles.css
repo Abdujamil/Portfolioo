@@ -18,7 +18,6 @@
   src: url("../fonts/Ruberoid-ExtraBold.woff2");
 }
 
-
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -36,9 +35,8 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scroll-bg-hover-color) ;
+  background: var(--scroll-bg-hover-color);
 }
-
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
@@ -109,7 +107,6 @@ input[type="number"] {
 }
 
 :root[data-theme="dark"] {
-
   --scroll-bg-color: #01659e;
   --scroll-bg-hover-color: #4892d8;
   --body-bg-color: #10151c;
@@ -158,6 +155,8 @@ input[type="number"] {
   padding: 0;
   box-sizing: border-box;
   font-family: "Ruberoid-Light";
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -1162,8 +1161,9 @@ body {
 }
 
 .project_three {
+  min-height: 972px;
   height: 75vh;
-  /* margin-top: 136px; */
+  margin-top: 136px;
   background: linear-gradient(rgb(10 6 6 / 66%), rgb(0 0 0 / 74%)) no-repeat
       center,
     url(../img/bdo.png) no-repeat center;
@@ -1380,6 +1380,10 @@ body {
 }
 
 @media (max-width: 670px) {
+  .project_three {
+    margin-top: 0;
+  }
+
   .vertical_line_right {
     border: 1px solid #79797a;
     z-index: -1;
@@ -1491,6 +1495,13 @@ body {
   color: white;
 }
 
+.error-message {
+  color: red;
+  margin-top: 8px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
 form {
   display: flex;
   align-items: center;
@@ -1507,6 +1518,13 @@ form {
   transform: translate(-50%, -50%); */
 }
 
+.contact_form input[type="text"] {
+  margin-top: 0;
+}
+.contact_form textarea[name="message"] {
+  margin-top: 36px;
+}
+
 .contact_form input {
   font-family: "Ruberoid-ExtraBold";
   font-style: normal;
@@ -1518,8 +1536,8 @@ form {
   height: 66px;
   background-color: transparent;
   border: transparent;
-  padding: 0 0 15px 0;
-  margin-bottom: 36px;
+  /* padding: 0 0 15px 0; */
+  margin-top: 36px;
   color: var(--home-txt-left);
 
   border-bottom: var(--vartical-line-border);
@@ -1544,13 +1562,12 @@ form {
   height: 66px;
   background-color: transparent;
   border: transparent;
-  padding: 0 0 15px 0;
+  /* padding: 0 0 15px 0; */
 
   border-bottom: var(--vartical-line-border);
   border-top: none;
   border-left: none;
   border-right: none;
-  margin-bottom: 36px;
   resize: none;
 }
 
@@ -1573,6 +1590,7 @@ form {
   border-radius: 35px;
   border-color: transparent;
   cursor: pointer;
+  margin-top: 36px;
   margin-bottom: 51px;
 
   transition: all 1s ease-in-out;
@@ -1627,10 +1645,11 @@ form {
 
   .contact_form button,
   .contact_form input,
-  .contact_form textarea {
+  .contact_form textarea,
+  .error-message {
     font-size: 3vw;
     padding: 0;
-    margin-bottom: 5vw;
+    /* margin-bottom: 5vw; */
   }
 
   .contact_form button {
@@ -1662,6 +1681,24 @@ form {
 
   .contact_form {
     width: 88%;
+  }
+
+  .contact_form textarea {
+    height: 50px;
+  }
+
+  .contact_form input,
+  .contact_form textarea {
+    margin-top: 0px;
+  }
+
+  .contact_form textarea[name="message"] {
+    margin-top: 10px;
+  }
+
+  .contact_form button {
+
+    margin-bottom: 35px;
   }
 }
 

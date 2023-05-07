@@ -1,60 +1,64 @@
-// // Получаем элементы формы
-// const form = document.querySelector('#contact-form');
-// const nameInput = document.querySelector('#name');
-// const emailInput = document.querySelector('#email');
-// const messageInput = document.querySelector('#message');
-// const submitButton = document.querySelector('#submit');
 
-// // Добавляем слушатель событий на отправку формы
-// form.addEventListener('submit', (event) => {
-//   // Отменяем отправку формы по умолчанию
-//   event.preventDefault();
+function contactForm(){
 
-//   // Проверяем поля формы
-//   let errors = false;
+    const form = document.getElementById("contact-form");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
+    const nameError = document.getElementById("name-error");
+    const emailError = document.getElementById("email-error");
+    const messageError = document.getElementById("message-error");
+    
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (validateForm()) {
+        // Send form data to server or do something with it here
+        console.log("Form submitted successfully!");
+        form.reset();
+      }
+    });
+    
+    function validateForm() {
+      let isValid = true;
+      const nameValue = name.value.trim();
+      const emailValue = email.value.trim();
+      const messageValue = message.value.trim();
+    
+      if (nameValue === "") {
+        nameError.innerText = "Name is required";
+        isValid = false;
+      } else {
+        nameError.innerText = "";
+      }
+    
+      if (emailValue === "") {
+        emailError.innerText = "Email is required";
+        isValid = false;
+      } else if (!isValidEmail(emailValue)) {
+        emailError.innerText = "Invalid email address";
+        isValid = false;
+      } else {
+        emailError.innerText = "";
+      }
+    
+      if (messageValue === "") {
+        messageError.innerText = "Message is required";
+        isValid = false;
+      } else {
+        messageError.innerText = "";
+      }
+    
+      return isValid;
+    }
+    
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+}
 
-//   // Проверяем поле "Имя"
-//   if (nameInput.value === '') {
-//     nameInput.classList.add('error');
-//     errors = true;
-//   } else {
-//     nameInput.classList.remove('error');
-//   }
 
-//   // Проверяем поле "Email"
-//   const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   if (!emailRegExp.test(emailInput.value)) {
-//     emailInput.classList.add('error');
-//     errors = true;
-//   } else {
-//     emailInput.classList.remove('error');
-//   }
-
-//   // Проверяем поле "Сообщение"
-//   if (messageInput.value === '') {
-//     messageInput.classList.add('error');
-//     errors = true;
-//   } else {
-//     messageInput.classList.remove('error');
-//   }
-
-//   // Если есть ошибки, прерываем отправку формы
-//   if (errors) {
-//     return;
-//   }
-
-//   // Отправляем форму
-//   form.submit();
-// });
-
-
-
-
-// document.querySelector(document).ready(function () {
-//     document.querySelector('.hamburger').addEventListener('click', function () {
-//         document.querySelector(this).classList.toggle('is-active');
-//     });
-// });
+contactForm()
 
 
 
@@ -78,6 +82,7 @@ function isOpenMenu() {
 }
 
 isOpenMenu();
+
 
 function changeTheme() {
     const toggleTheme = document.querySelectorAll('.sun');
