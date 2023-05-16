@@ -103,22 +103,26 @@ function changeTheme() {
 
     })
 
-    // toggleTheme.addEventListener('click', () => {
-
-    //     if (el.hasAttribute('data-theme')) {
-    //         el.removeAttribute('data-theme');
-    //         localStorage.removeItem('theme');
-
-    //     } else {
-    //         el.setAttribute('data-theme', 'dark');
-    //         localStorage.setItem('theme', 'dark');
-    //     }
-
-    // });
-
     if (localStorage.getItem('theme') !== null) {
         el.setAttribute('data-theme', 'dark');
     }
 }
 
 changeTheme();
+
+
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('image-animation');
+    }
+  });
+});
+
+const viewbox = document.querySelectorAll('.image');
+viewbox.forEach(image => {
+  observer.observe(image);
+});
