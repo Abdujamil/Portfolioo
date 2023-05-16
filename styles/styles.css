@@ -1361,6 +1361,13 @@ body {
 .project_three .projects_card_head a:hover {
   color: #0e89af;
 }
+.project_btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
 
 #projects button {
   font-family: "Ruberoid-ExtraBold";
@@ -1368,8 +1375,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  min-width: 500px;
-  max-width: 100%;
+  width: 500px;
   height: 68px;
   color: white;
 
@@ -1378,9 +1384,8 @@ body {
   border-radius: 35px;
   border-color: transparent;
   cursor: pointer;
-  margin-top: 36px;
+  margin-top: 50px;
   margin-bottom: 51px;
-
   transition: all 1s ease-in-out;
 }
 
@@ -1388,6 +1393,13 @@ body {
   transform: scale(1.01);
 }
 
+#projects button span{
+  transition: all .2s ease-in-out;
+}
+
+#projects button:hover span{
+  margin-left: 10px;
+}
 
 @media (max-width: 1280px) {
   .project_three,
@@ -1514,6 +1526,14 @@ body {
   .project_two,
   .project_one {
     min-height: 100vh;
+  }
+}
+
+@media (max-width: 510px) {
+  #projects button{
+    width: 95vw;
+    height: 12vw;
+    font-size: 5vw;
   }
 }
 
